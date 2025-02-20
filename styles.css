@@ -74,7 +74,12 @@ button:hover {
     margin-bottom: 10px;
 }
 
-#post-image {
+#media-type {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#post-image-upload {
     width: 100%;
     margin-bottom: 10px;
 }
