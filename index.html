@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHU Memorial</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JHU Memorial Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the JHU Memorial Website</h1>
-        <p>Honoring our cyber group and memories.</p>
-        <button id="theme-toggle">Toggle Dark/Light Mode</button>
-    </header>
+  <!-- Banner Message -->
+  <section id="banner">
+    <p>This is a retro-themed chat forum for fun, not a real one. Enjoy the chaos of the early 2000s internet!</p>
+  </section>
 
-    <section id="lore">
-        <h2>Lore</h2>
-        <p>Here is some lore about our journey...</p>
-        <p><strong>Quote:</strong> "In the digital world, every connection matters."</p>
-    </section>
+  <!-- Post Submission Form -->
+  <section id="post-form">
+    <h2>Submit Your Post!</h2>
+    <form id="submit-post-form">
+      <label for="post-text">Text:</label>
+      <textarea id="post-text" placeholder="Enter your post text..." rows="5"></textarea>
 
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="slideshow">
-            <img src="images/example-image1.jpg" alt="Image 1">
-            <img src="images/example-image2.jpg" alt="Image 2">
-            <img src="images/example-image3.jpg" alt="Image 3">
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
-    </section>
+      <label for="post-image">Image URL (optional):</label>
+      <input type="url" id="post-image" placeholder="Enter image URL (optional)" />
 
-    <footer>
-        <p>&copy; 2025 JHU Memorial. All Rights Reserved.</p>
-    </footer>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
-    <script src="script.js"></script> <!-- Link to JS file -->
+  <!-- Display Area for Posts -->
+  <section id="posts">
+    <h2>Forum Posts</h2>
+    <div id="post-display"></div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
