@@ -1,92 +1,85 @@
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* General Reset and Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+}
+
+/* Banner Styles */
+#banner {
+  background-color: #ff00ff;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#banner p {
+  font-size: 1.2rem;
+}
+
+/* Forum Post Styles */
+#posts {
+  margin-top: 20px;
+}
+
+.forum-post {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff00ff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.forum-post p {
+  word-wrap: break-word;
+}
+
+.forum-post img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+#post-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ff00ff;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+textarea, input[type="url"] {
+  background-color: #222;
+  border: 1px solid #ff00ff;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+  background-color: #00ff00;
+  border: 2px solid #ff00ff;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
-    background-color: #555;
-}
-
-section {
-    margin: 20px;
-    padding: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
-
-/* Slideshow Styles */
-.slideshow {
-    position: relative;
-    max-width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-}
-
-.slideshow img.active {
-    display: block;
-}
-
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-button.prev { left: 0; }
-button.next { right: 0; }
-
-.dark-mode {
-    background-color: #1e1e1e;
-    color: #f3f3f3;
-}
-
-/* Scroll Animation */
-#lore, #gallery {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-#lore.visible, #gallery.visible {
-    opacity: 1;
-    transform: translateY(0);
+  background-color: #ff00ff;
+  color: white;
 }
