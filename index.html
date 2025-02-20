@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JHU Memorial Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHU Cyber Group</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Banner Message -->
-  <section id="banner">
-    <p>This is a retro-themed chat forum for fun, not a real one. Enjoy the chaos of the early 2000s internet!</p>
-  </section>
+    <header>
+        <h1>Welcome to the JHU Cyber Group!</h1>
+        <button id="theme-toggle">Toggle Dark/Light Mode</button>
+    </header>
 
-  <!-- Post Submission Form -->
-  <section id="post-form">
-    <h2>Submit Your Post!</h2>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slideshow">
+            <img src="images/image1.jpg" alt="Image 1">
+            <img src="images/image2.jpg" alt="Image 2">
+            <img src="images/image3.jpg" alt="Image 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Post Submission Form -->
     <form id="submit-post-form">
-      <label for="post-text">Text:</label>
-      <textarea id="post-text" placeholder="Enter your post text..." rows="5"></textarea>
-
-      <label for="post-image">Image URL (optional):</label>
-      <input type="url" id="post-image" placeholder="Enter image URL (optional)" />
-
-      <button type="submit">Submit</button>
+        <textarea id="post-text" placeholder="Enter your post text here..."></textarea>
+        <input type="text" id="post-image" placeholder="Enter image URL (optional)">
+        <button type="submit">Submit Post</button>
     </form>
-  </section>
 
-  <!-- Display Area for Posts -->
-  <section id="posts">
-    <h2>Forum Posts</h2>
+    <!-- Container to display posts -->
     <div id="post-display"></div>
-  </section>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>JHU Cyber Group - 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
