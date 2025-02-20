@@ -1,3 +1,5 @@
+// JavaScript for interactivity and features
+
 // Dark/Light mode toggle
 document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
