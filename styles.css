@@ -1,85 +1,80 @@
-/* General Reset and Basic Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Basic Styles */
 body {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #1a1a1a;
-  color: white;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
 }
 
-/* Banner Styles */
-#banner {
-  background-color: #ff00ff;
-  color: black;
-  padding: 15px;
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 5px;
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-#banner p {
-  font-size: 1.2rem;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-/* Forum Post Styles */
-#posts {
-  margin-top: 20px;
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
 }
 
-.forum-post {
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid #ff00ff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px 0;
 }
 
-.forum-post p {
-  word-wrap: break-word;
+.slideshow img {
+    width: 100%;
+    display: none;
 }
 
-.forum-post img {
-  display: block;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-/* Form Styles */
-#post-form {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #ff00ff;
-  max-width: 600px;
-  margin-bottom: 20px;
-}
-
-textarea, input[type="url"] {
-  background-color: #222;
-  border: 1px solid #ff00ff;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+.slideshow img.active {
+    display: block;
 }
 
 button {
-  background-color: #00ff00;
-  border: 2px solid #ff00ff;
-  color: black;
-  font-family: 'Press Start 2P', cursive;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #ff00ff;
-  color: white;
+    background-color: #45a049;
+}
+
+/* Post Display */
+#post-display {
+    margin-top: 20px;
+}
+
+.forum-post {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#post-text {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#post-image {
+    width: 100%;
+    margin-bottom: 10px;
 }
