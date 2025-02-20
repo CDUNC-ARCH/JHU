@@ -26,7 +26,17 @@
     <!-- Post Submission Form -->
     <form id="submit-post-form">
         <textarea id="post-text" placeholder="Enter your post text here..."></textarea>
-        <input type="text" id="post-image" placeholder="Enter image URL (optional)">
+
+        <!-- Media Type Selection -->
+        <select id="media-type">
+            <option value="text">Text</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+        </select>
+
+        <!-- Image Upload -->
+        <input type="file" id="post-image-upload" accept="image/*">
+
         <button type="submit">Submit Post</button>
     </form>
 
