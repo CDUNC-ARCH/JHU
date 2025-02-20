@@ -41,34 +41,48 @@ function isElementInView(element) {
 document.getElementById("submit-post-form").addEventListener("submit", function(event) {
     event.preventDefault();  // Prevent form from reloading the page
 
-    // Get text and image URL input
+    // Get input values
     const postText = document.getElementById("post-text").value;
-    const postImage = document.getElementById("post-image").value;
+    const mediaType = document.getElementById("media-type").value;
+    const fileInput = document.getElementById("post-image-upload");
+    let postImage = "";
 
-    // Create a new div for the post
-    const newPost = document.createElement("div");
-    newPost.classList.add("forum-post");
-
-    // Add text content
-    const postContent = document.createElement("p");
-    postContent.innerText = postText || "No text provided."; // Default message if no text
-
-    // If there's an image URL, add it to the post
-    if (postImage) {
-        const postImageElement = document.createElement("img");
-        postImageElement.src = postImage;
-        postImageElement.alt = "User Submitted Image";
-        postImageElement.style.maxWidth = "200px";  // Limit image size
-        postContent.appendChild(postImageElement);
+    // Handle file input for images
+    if (fileInput.files.length > 0 && mediaType === "image") {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            postImage = e.target.result;
+            createPost(postText, mediaType, postImage);
+        };
+        reader.readAsDataURL(file);  // Read file as base64 URL
+    } else {
+        createPost(postText, mediaType, postImage);
     }
-
-    // Add the post content to the post container
-    newPost.appendChild(postContent);
-
-    // Append the new post to the display area
-    document.getElementById("post-display").appendChild(newPost);
 
     // Clear the form inputs after submission
     document.getElementById("post-text").value = "";
-    document.getElementById("post-image").value = "";
+    document.getElementById("post-image-upload").value = "";
+    document.getElementById("media-type").value = "text";
 });
+
+// Create a new post dynamically
+function createPost(postText, mediaType, postImage) {
+    const newPost = document.createElement("div");
+    newPost.classList.add("forum-post");
+
+    let postContent = `<p>Type: ${mediaType}</p>`;
+    
+    if (mediaType === "text" && postText) {
+        postContent += `<p>${postText}</p>`;
+    } else if (mediaType === "image" && postImage) {
+        postContent += `<img src="${postImage}" alt="User Submitted Image" style="max-width: 200px;">`;
+    } else if (mediaType === "video" && postText) {
+        postContent += `<video width="320" height="240" controls><source src="${postText}" type="video/mp4"></video>`;
+    } else {
+        postContent += "<p>No content provided.</p>";
+    }
+
+    newPost.innerHTML = postContent;
+    document.getElementById("post-display").appendChild(newPost);
+}
