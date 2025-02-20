@@ -10,22 +10,30 @@
     <header>
         <h1>Welcome to the JHU Memorial Website</h1>
         <p>Honoring our cyber group and memories.</p>
+        <button id="theme-toggle">Toggle Dark/Light Mode</button>
     </header>
 
-    <section>
+    <section id="lore">
         <h2>Lore</h2>
         <p>Here is some lore about our journey...</p>
         <p><strong>Quote:</strong> "In the digital world, every connection matters."</p>
     </section>
 
-    <section>
+    <section id="gallery">
         <h2>Gallery</h2>
-        <img src="images/example-image.jpg" alt="Example Image">
-        <!-- Add more images as needed -->
+        <div class="slideshow">
+            <img src="images/example-image1.jpg" alt="Image 1">
+            <img src="images/example-image2.jpg" alt="Image 2">
+            <img src="images/example-image3.jpg" alt="Image 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
     </section>
 
     <footer>
         <p>&copy; 2025 JHU Memorial. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script> <!-- Link to JS file -->
 </body>
 </html>
